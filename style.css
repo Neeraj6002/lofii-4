@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Loader section */
+#loader {
+  width: 100%;
+  height: 100vh;
+  background: #000; /* start black */
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+#loader h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+#topheading {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+/* Overlay panels */
+#white,
+#green {
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+#white {
+  background:#dadada;
+  z-index: 8;
+}
+
+#green {
+  background: #14cf93;
+  z-index: 9;
+}
+
+/* Text reveal setup */
+.revel .parent {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.revel .parent .child {
+  display: inline-block;
+}
+
+
+.home nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vw;
+    width: 100%;
+    height: 100px;
+}
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin: 0 1.5vw;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #14cf93;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+.hero{
+    margin-top: 1vw;
+    display :flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 9vw;
+    line-height: 1;
+    padding-left: 8vw;
+    color: #333
+}
+
+.hero h1{
+    font-size: 11vw;
+    font-weight: 900;
+}
+
+.hero .text{
+    margin-top: 5vw;
+}
+.hero h5{
+    opacity: 0.6;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.hero:nth-child(3){
+    margin-top: 0;
+}
+
+.svg-text{
+    font-size: 70px;
+}
